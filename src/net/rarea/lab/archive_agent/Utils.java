@@ -37,7 +37,7 @@ public class Utils {
     public static JsonObject readAsJson(Path file) {
         if (!Files.exists(file)) return null;
         try {
-            return new JsonParser().parse(new FileReader(file.toFile())).getAsJsonObject();
+            return new JsonParser().parse(new FileReader(file.toFile(), StandardCharsets.UTF_8)).getAsJsonObject();
         } catch (Exception e) {
             return null;
         }
