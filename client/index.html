@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/htm">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <base href=".">
+        <link href="icon.png" rel="Shortcut Icon">
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <script src="main.js"></script>
+        <title>rarea.lab.archive_agent.console</title>
+    </head>
+    <body>
+        <div class = "item" id="head">
+            <a href="https://www.rarea.net">rarea</a>.<a href="https://lab.rarea.net">lab</a>.<a href="https://lab.rarea.net/archive_agent">archive_agent</a>.<a href="." id="current">console</a>
+        </div>
+
+        <div class = "item" id="status">
+            <div class="inline_tag">
+                <h3>Current Agent Status: </h3> <a id="current_status">Uninitialized</a>
+            </div>
+        </div>
+
+        <div class = "item page" id="overview_page">
+            <h2>Overview</h2>
+            <div class="inline_tag">
+                <h3>Archive Folder: </h3> <a id="archive_folder" class="uninitialized">Set Archive Folder</a>
+            </div>
+            <div class="unbound_list">
+                <h3>Watching Folders</h3>
+                <ul id="watching_folders_list"></ul>
+                <a id="add_watching_folder" class="disabled">Add New Folder</a>
+            </div>
+            <div class="options">
+                <a id="move_archive_folder" class="disabled" title="Move archives to a new folder">Move Archive Folder</a>
+                <a id="pause_syncing" class="disabled" title="Pause auto syncing">Pause Syncing</a>
+                <a id="settings_btn" class="disabled" title="Go to settings">Settings</a>
+                <a id="quit" class="disabled" title="Discard pending tasks and quit agent">Quit</a>
+            </div>
+        </div>
+        
+        <div class = "item page" id="watching_folder_page">
+            <h2 id="watching_folder_title"></h2>
+            <div class="bounded_list">
+                <h3>Archived Files</h3>
+                <div>
+                    <ul id="files_list"></ul>
+                </div>
+                <div class = "options" id="file_options">
+                    <a id="file_restore" class="disabled" title="Restore the latest version of this file">Restore</a>
+                    <a id="file_discard_all" class="disabled" title="Discard all outdated versions of this file">Discard Outdated Versions</a>
+                    <a id="file_clean" class="disabled" title="Clean this file">Clean</a>
+                </div>
+            </div>
+            <div class="bounded_list">
+                <h3>Records</h3>
+                <h4 id="records_path">Select A File</h4>
+                <div>
+                    <ul id="records_list"></ul>
+                </div>
+                <div class = "options" id="record_options">
+                    <a id="record_restore" class="disabled" title="Restore this version">Restore Record</a>
+                    <a id="record_discard" class="disabled" title="Discard this version">Discard Record</a>
+                </div>
+            </div>
+            <div class="options">
+                <a id="restore_all" class="disabled" title="Restore all archived files of this folder to another folder">Restore All</a>
+                <a id="discard_all" class="disabled" title="Clean all archived files which are not in the latest version">Discard Outdated</a>
+                <a id="clean_inactive" class="disabled" title="Clean all archived files whose original files have been deleted">Clean Inactive</a>
+                <a id="stop_watching" class="disabled" title="Stop watching this folder and clean all archived files">Stop Watching</a>
+            </div>
+        </div>
+
+        <div class = "item page" id="settings_page">
+            <h2>Settings</h2>
+            <div class="unbound_list">
+                <ul id="settings_list">
+                    <div class="inline_tag">
+                        <h3>Settings are under development ... </h3>
+                    </div>
+                    <div class="inline_tag">
+                        <h4>Auto Syncing: </h4> <a id="auto_syncing" class="disabled">Enabled</a>
+                    </div>
+                    <div class="inline_tag">
+                        <h4>Auto Discard Outdated Records: </h4> <a id="auto_discard_outdated" class="disabled">Disabled</a>
+                    </div>
+                    <div class="inline_tag">
+                        <h4>Auto Clean Inactive Records: </h4> <a id="auto_clean_inactive" class="disabled">Disabled</a>
+                    </div>
+                    <div class="inline_tag">
+                        <h4>Launch on Start: </h4> <a id="launch_on_start" class="disabled">Disabled</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "item page" id="log_page">
+            <h2>log</h2>
+            <div class="bounded_list">
+                <h3>Server Log</h3>
+                <div>
+                    <ul id="server_log_list"></ul>
+                </div>
+            </div>
+            <div class="bounded_list">
+                <h3>Agent Log</h3>
+                <div>
+                    <ul id="agent_log_list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class = "item" id="foot">
+            <a href="https://www.rarea.net/huaxu.html">Dream of Huaxu</a>
+        </div>
+    </body>
+</html>

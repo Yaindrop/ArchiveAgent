@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    background-color: #EEEEEE;
+    overflow-x: hidden;
+    font-family: "Consolas", "STHeiTi", "Microsoft YaHei";
+    font-size: 1em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+a:hover {
+    color: cornflowerblue;
+}
+.disabled, .disabled:hover {
+    color: #666666;
+    cursor: default !important;
+}
+
+.item{
+    width: 80vw;
+    margin: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    padding: 3vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    line-height: 1.7em;
+}
+#head {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family: "Courier";
+    font-size: 3rem;
+}
+#current {
+    font-weight: bold;
+}
+
+#status {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.page {
+    display: none;
+}
+.page div {
+    margin-left: 1rem;
+}
+.inline_tag * {
+    display: inline-block;
+}
+.bounded_list div, .unbound_list ul, #add_watching_folder, #records_path {
+    margin-left: 1rem;
+}
+.bounded_list div {
+    height: auto;
+    max-height: 30rem;
+    overflow: auto;
+}
+.options {
+    margin-left: 0 !important;
+    border-top-style: dashed;
+    padding-top: .5rem;
+    text-align: center;
+}
+.options a {
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-block;
+    float: none;
+}
+
+
+
+#records_list, #files_list, #server_log_list, #agent_log_list {
+    margin-left: 1rem;
+}
+
+#file_options, #record_options {
+    border-top-style: dashed;
+    margin-bottom: .5rem;
+    display: none;
+}
+#record_options {
+    margin-bottom: 2rem;
+}
+
+.inactive {
+    font-style: italic;
+}
+
+
+
+#info {
+    padding: auto;
+    font-family: "Courier", "Fangsong", "STFangsong", "Microsoft YaHei";
+    font-size: 1rem;
+}
+#foot {
+    padding: auto;
+    font-family: "Courier";
+    font-size: 1rem;
+}
+#foot a{
+    margin: auto;
+    display: table;
+}
+/*Medium Screen*/
+@media only screen and (min-width: 701px) and (max-width: 1400px){
+    html{
+        font-size: 1.2em;
+    }
+    .item{
+        width: 90vw;
+    }
+    #head{
+        font-size: 6vw;
+    }
+}
+/*Small Screen*/
+@media only screen and (max-width: 700px){
+    html{
+        font-size: 1.5em;
+    }
+    .item{
+        width: 100vw;
+    }
+    #head{
+        font-size: 10vw;
+    }
+}
